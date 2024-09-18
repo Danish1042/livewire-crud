@@ -11,6 +11,18 @@ This project features a Single Page Application (SPA) that implements full CRUD 
 - Show All
 - Delete
 
+### Show All
+![GitHub Logo](https://github.com/Danish1042/livewire-crud/blob/master/index.png)
+
+### Create Post
+![GitHub Logo](https://github.com/Danish1042/livewire-crud/blob/master/create-post.png)
+
+### Edit  Post
+![GitHub Logo](https://github.com/Danish1042/livewire-crud/blob/master/edit-post.png)
+
+### Show Post
+![GitHub Logo](https://github.com/Danish1042/livewire-crud/blob/master/show-post.png)
+
 ## Run Locally
 
 Clone the project
