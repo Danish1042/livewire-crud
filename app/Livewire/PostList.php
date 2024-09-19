@@ -12,9 +12,13 @@ class PostList extends Component
 {
     use WithPagination, WithoutUrlPagination;
 
+    public $searchTerm = null;
+
     public function render()
     {
-        $posts =  Post::orderBy('id', 'DESC')->paginate(3);
+        $posts =  Post::where('title' , 'like', '%' . $this->searchTerm . '%')
+        ->orWhere('content' , 'like', '%' . $this->searchTerm . '%')
+        ->orderBy('id', 'DESC')->paginate(3);
 
         return view('livewire.post-list', compact('posts'));
     }

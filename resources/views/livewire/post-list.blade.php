@@ -32,7 +32,12 @@
 
     {{-- Table Design --}}
     <div class="card shadow">
-        <div class="card-body mt-4 table-responsive">
+        <div class="card-body mt-4 table-responsive shadow">
+            {{--Search Bar  --}}
+
+            <div class="col-xl-4 ms-auto my-3">
+                <input type="text" wire:model.live="searchTerm" class="form-control" placeholder="Search Post.." />
+            </div>
             <table class="table table-striped">
                 <thead>
                     <th>#</th>
@@ -62,7 +67,7 @@
                             </td>
                             <td>
                                 <a wire:navigate href="{{ route('posts.edit', $post->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <button type="submit" class="btn btn-danger btn-sm" wire:click="deletePost({{ $post->id }})" wire:confirm = "Are you sure you want to delete this Post?">Delete</button>
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="alert('Are you')" wire:click="deletePost({{ $post->id }})">Delete</button>
                             </td>
                         </tr>
                     @empty
@@ -74,7 +79,3 @@
         </div>
     </div>
 </div>
-
-<script>
-
-</script>
